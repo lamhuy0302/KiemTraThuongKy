@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giai phuong trinh bac 2"
+        android:textSize="35sp"
+        android:gravity="center"
+        />
+    <EditText
+    android:hint="Nhap a"
+        android:id="@+id/etA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Nhap b"
+        android:id="@+id/etB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Nhap c"
+        android:id="@+id/etC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGiai"
+        android:text="Giai va goi ket qua"
+        android:gravity="center"/>
+</LinearLayout>
