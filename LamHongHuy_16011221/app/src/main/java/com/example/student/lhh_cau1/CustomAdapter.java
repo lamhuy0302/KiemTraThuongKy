@@ -25,10 +25,10 @@ public class CustomAdapter extends ArrayAdapter<Infomation>{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder;
+        ViewHolder viewHolder = new ViewHolder();
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.row, parent, false);
-            viewHolder = new ViewHolder();
+
             viewHolder.ivAvatar = (ImageView)convertView.findViewById(R.id.ivAvatar);
             viewHolder.tvName = (TextView) convertView.findViewById(R.id.tvName);
             viewHolder.tvBirth = (TextView) convertView.findViewById(R.id.tvBirth);
@@ -39,6 +39,7 @@ public class CustomAdapter extends ArrayAdapter<Infomation>{
             viewHolder = (ViewHolder) convertView.getTag();
         }
         Infomation info = arrContact.get(position);
+        viewHolder.tvName.setText(String.valueOf(position+1));
         viewHolder.ivAvatar.setImageResource(info.getAva());
         viewHolder.tvName.setText(info.getName());
         viewHolder.tvBirth.setText(info.getBirthYear());

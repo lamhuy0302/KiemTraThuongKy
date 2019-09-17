@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class Main2ActivityBai2 extends AppCompatActivity {
 
-    @Override
     TextView tvKq;
     Button btnGoiA;
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +25,9 @@ public class Main2ActivityBai2 extends AppCompatActivity {
         //Có Bundle rồi thì lấy các thông số dựa vào soa, sob
         int a=packageFromCaller.getInt("soa");
         int b=packageFromCaller.getInt("sob");
-        int b=packageFromCaller.getInt("soc");
+        int c=packageFromCaller.getInt("soc");
+        giaipt(a,b,c);
         //        //tiến hành xử lý
-        giaipt(a, b,c);
         btnGoiA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 finish();
@@ -37,25 +36,7 @@ public class Main2ActivityBai2 extends AppCompatActivity {
     }
     public void giaipt(int a,int b, int c)
     {
-        String kq="";
-        if(a==0 && b==0)
-        {
-            kq="Vô số nghiệm";
-        }
-        else if(a==0 && b!=0)
-        {
-            kq="Vô nghiệm";
-        }
-        else
-        {
-
-        }
+        int kq = a+b+c;
         tvKq.setText(kq);
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_result, menu);
-        return true;
     }
 }
